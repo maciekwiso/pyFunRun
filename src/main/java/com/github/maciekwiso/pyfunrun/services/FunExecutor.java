@@ -30,7 +30,7 @@ public class FunExecutor {
         var runManager = RunManager.getInstance(pyFunction.getProject());
         var configuration = runManager.createConfiguration("PyFunRun " + pyFunction.getName(), PythonConfigurationType.class);
         var pythonRunConfiguration = (PythonRunConfiguration)configuration.getConfiguration();
-        pythonRunConfiguration.setName("pyFunRun " + pyFunction.getName());
+        pythonRunConfiguration.setName("PyFunRun " + pyFunction.getName());
         pythonRunConfiguration.setUseModuleSdk(true);
         pythonRunConfiguration.setScriptName(pyFunction.getContainingFile().getName());
         pythonRunConfiguration.setModuleMode(false);

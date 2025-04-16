@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# pyFunRun Changelog
+# PyFunRun Changelog
 
 ## [Unreleased]
 ### Added

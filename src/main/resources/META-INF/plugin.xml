@@ -1,8 +1,15 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.maciekwiso.pyfunrun</id>
-    <name>pyFunRun</name>
+    <name>PyFunRun</name>
     <vendor>maciekwiso</vendor>
+    <description><![CDATA[
+      <p>This plugin allows you to run any Python function with no params as if it was the main function in the file.<br/>
+      It's very useful if you have a lot of small python utility functions and want to be able to run them quickly.<br/>
+Just make sure the functions have no params and name starts with "run" and then place this snippet at the end of the .py file:<br/><br/>
+globals()[sys.argv[1]]()<br/><br/>
+Next to each runnable function you will see run button and you can also use shortcut ctrl + alt + r<p>
+      ]]></description>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.python</depends>
