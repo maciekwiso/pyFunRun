@@ -5,11 +5,28 @@
     <vendor>maciekwiso</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.maciekwiso.pyfunrun.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
-        <postStartupActivity implementation="com.github.maciekwiso.pyfunrun.startup.MyProjectActivity" />
+        <runLineMarkerContributor
+                language="Python"
+                implementationClass="com.github.maciekwiso.pyfunrun.startup.PyFunRunLineMarkerContributor"/>
     </extensions>
+
+    <actions resource-bundle="messages.MyBundle">
+        <action
+                id="com.github.maciekwiso.pyfunrun.services.ExecuteAction"
+                class="com.github.maciekwiso.pyfunrun.services.ExecuteAction">
+
+        <add-to-group
+                group-id="RunMenu"
+                anchor="last"/>
+
+        <keyboard-shortcut
+                keymap="$default"
+                first-keystroke="ctrl alt R"/>
+        </action>
+    </actions>
 </idea-plugin>
