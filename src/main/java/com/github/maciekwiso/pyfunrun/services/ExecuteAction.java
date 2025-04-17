@@ -34,7 +34,8 @@ public class ExecuteAction extends AnAction {
         int offset = editor.getCaretModel().getOffset();
         PsiElement element = psiFile.findElementAt(offset);
         if (element != null) {
-            return PsiTreeUtil.getParentOfType(element, PyFunction.class);
+            var pyFun = PsiTreeUtil.getParentOfType(element, PyFunction.class);
+            return pyFun != null ? pyFun : offset > 1 ? PsiTreeUtil.getParentOfType(psiFile.findElementAt(offset - 1), PyFunction.class) : null;
         }
         return null;
     }
