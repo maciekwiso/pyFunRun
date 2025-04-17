@@ -23,7 +23,7 @@ public class FunExecutor {
     }
 
     public static boolean isExecutable(PyFunction pyFunction) {
-        return pyFunction != null && pyFunction.getName().startsWith("run");
+        return pyFunction != null && pyFunction.getName() != null && pyFunction.getName().startsWith("run");
     }
 
     private static RunnerAndConfigurationSettings createSdkRunConfiguration(PyFunction pyFunction) {
