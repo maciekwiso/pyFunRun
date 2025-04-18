@@ -9,21 +9,21 @@ import com.jetbrains.python.psi.PyFunction;
 import com.jetbrains.python.run.PythonConfigurationType;
 import com.jetbrains.python.run.PythonRunConfiguration;
 
-public class FunExecutor {
+public class FunRunner {
 
-    private static Logger log = Logger.getInstance(FunExecutor.class);
+    private static Logger log = Logger.getInstance(FunRunner.class);
 
-    public static void execute(PyFunction pyFunction) {
-        if (isExecutable(pyFunction)) {
-            log.debug("Executing function " + pyFunction.getName());
+    public static void run(PyFunction pyFunction) {
+        if (isRunnable(pyFunction)) {
+            log.debug("Running function " + pyFunction.getName());
             var config = createSdkRunConfiguration(pyFunction);
             add(config);
             run(config);
         }
     }
 
-    public static boolean isExecutable(PyFunction pyFunction) {
-        return pyFunction != null && pyFunction.getName() != null && pyFunction.getName().startsWith("run");
+    public static boolean isRunnable(PyFunction pyFunction) {
+        return pyFunction != null && pyFunction.getName() != null && pyFunction.getName().startsWith("run") && pyFunction.getParameterList().getParameters().length == 0;
     }
 
     private static RunnerAndConfigurationSettings createSdkRunConfiguration(PyFunction pyFunction) {

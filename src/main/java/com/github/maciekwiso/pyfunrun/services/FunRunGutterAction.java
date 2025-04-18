@@ -11,18 +11,15 @@ import com.intellij.psi.util.PsiTreeUtil;
 import com.jetbrains.python.psi.PyFunction;
 import org.jetbrains.annotations.NotNull;
 
-import static com.github.maciekwiso.pyfunrun.services.FunExecutor.execute;
+import static com.github.maciekwiso.pyfunrun.services.FunRunner.run;
 
-public class ExecuteAction extends AnAction {
-    private static Logger log = Logger.getInstance(ExecuteAction.class);
+public class FunRunGutterAction extends AnAction {
+    private static Logger log = Logger.getInstance(FunRunGutterAction.class);
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-        log.debug("ExecuteAction fired");
-        var pyFun = pyFunAtCaret(e);
-        if (pyFun != null) {
-            execute(pyFun);
-        }
+        log.debug("FunRunGutterAction fired");
+        run(pyFunAtCaret(e));
     }
 
     private PyFunction pyFunAtCaret(AnActionEvent anActionEvent) {

@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+## [1.0.0-beta.2] - 2025-04-18
+
+### Fixed
+
+- Fixed running function with params using keybind
+
 ## [1.0.0-beta.1] - 2025-04-17
 
 ### Added
