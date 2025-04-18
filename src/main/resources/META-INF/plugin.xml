@@ -24,8 +24,8 @@ import sys<br/>globals()[sys.argv[1]]()<p>
 
     <actions resource-bundle="messages.MyBundle">
         <action
-                id="com.github.maciekwiso.pyfunrun.services.FunRunGutterAction"
-                class="com.github.maciekwiso.pyfunrun.services.FunRunGutterAction">
+                id="com.github.maciekwiso.pyfunrun.services.FunRunAtCaretAction"
+                class="com.github.maciekwiso.pyfunrun.services.FunRunAtCaretAction">
 
         <add-to-group
                 group-id="RunMenu"

@@ -4,6 +4,12 @@
 
 ## [Unreleased]
 
+## [1.0.0-beta.3] - 2025-04-18
+
+### Fixed
+
+- Corrected class name
+
 ## [1.0.0-beta.2] - 2025-04-18
 
 ### Fixed

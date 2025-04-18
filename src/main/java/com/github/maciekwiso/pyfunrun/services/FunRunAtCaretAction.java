@@ -13,12 +13,12 @@ import org.jetbrains.annotations.NotNull;
 
 import static com.github.maciekwiso.pyfunrun.services.FunRunner.run;
 
-public class FunRunGutterAction extends AnAction {
-    private static Logger log = Logger.getInstance(FunRunGutterAction.class);
+public class FunRunAtCaretAction extends AnAction {
+    private static Logger log = Logger.getInstance(FunRunAtCaretAction.class);
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
-        log.debug("FunRunGutterAction fired");
+        log.debug("FunRunAtCaretAction fired");
         run(pyFunAtCaret(e));
     }
 
