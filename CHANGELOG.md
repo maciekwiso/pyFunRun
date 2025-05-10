@@ -32,6 +32,7 @@
 
 - Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
 
-[Unreleased]: https://github.com/maciekwiso/pyFunRun/compare/v1.0.0-beta.1...HEAD
+[Unreleased]: https://github.com/maciekwiso/pyFunRun/compare/v1.0.0-beta.2...HEAD
+[1.0.0-beta.2]: https://github.com/maciekwiso/pyFunRun/compare/v1.0.0-beta.1...v1.0.0-beta.2
 [1.0.0-beta.1]: https://github.com/maciekwiso/pyFunRun/compare/v0.0.1-alpha...v1.0.0-beta.1
 [0.0.1-alpha]: https://github.com/maciekwiso/pyFunRun/commits/v0.0.1-alpha
